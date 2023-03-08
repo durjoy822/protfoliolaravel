@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 
 use App\Models\Blog;
+use App\Models\Message;
 use App\Models\Project;
 use App\Models\Resume;
 use App\Models\Service;
@@ -30,6 +31,7 @@ class HomeController extends Controller
     public function admin_dashboard(){
         return view('admin.home.home',[
             'admins'=>AdminUser::all(),
+            'messages'=>Message::all(),
         ]);
     }
     public function blogView(){
@@ -42,5 +44,6 @@ class HomeController extends Controller
             ]);
 
     }
+
 
 }

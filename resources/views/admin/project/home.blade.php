@@ -26,6 +26,7 @@
                                     <th>section</th>
                                     <th>image</th>
                                     <th>technology</th>
+                                    <th>project_details</th>
                                     <th>github_link</th>
                                     <th>Server link</th>
                                     <th>Action</th>
@@ -43,6 +44,7 @@
                                             <img style="width: 70px" src="{{asset($project->image)}}">
                                         </td>
                                         <td>{{$project->technology}}</td>
+                                        <td>{{$project->project_details}}</td>
                                         <td>{{$project->github_link}}</td>
                                         <td>{{$project->server_link}}</td>
                                         <td>

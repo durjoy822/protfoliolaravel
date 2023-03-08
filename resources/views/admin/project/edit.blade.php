@@ -43,6 +43,12 @@
                                     </div>
                                     <div class="col-sm-8">
                                         <div class="form-group">
+                                            <label class="floating-label" for="technoloy">Project details</label>
+                                            <input type="text" value="{{$project->project_details}}" class="form-control" id="technology" name="project_details" aria-describedby="emailHelp"placeholder="project details">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-8">
+                                        <div class="form-group">
                                             <label class="floating-label" for="link">Github Link</label>
                                             <input type="text" class="form-control" value="{{$project->github_link}}" id="link" name="github_link" aria-describedby="emailHelp"placeholder="section">
                                         </div>

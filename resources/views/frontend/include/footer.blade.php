@@ -1,4 +1,4 @@
-<footer class="ftco-footer ftco-section">
+<footer class="ftco-footer ftco-section pb-0">
     <div class="container">
         <div class="row mb-5">
             <div class="col-md">
@@ -16,7 +16,7 @@
                 </div>
             </div>
             <div class="col-md">
-                <div class="ftco-footer-widget mb-4 ml-md-4">
+                <div class="ftco-footer-widget ml-md-4">
                     <h2 class="ftco-heading-2">Links</h2>
                     <ul class="list-unstyled">
                         <li><a href="#home-section"><span class="icon-long-arrow-right mr-2"></span>Home</a></li>
@@ -44,8 +44,8 @@
                         <ul>
                             @foreach($infos as $info)
                             <li><span class="icon icon-map-marker"></span><span class="text">{{$info->address}}</span></li>
-                            <li><a href="#"><span class="icon icon-phone"></span><span class="text">{{$info->phone}}</span></a></li>
-                            <li><a href="#"><span class="icon icon-envelope"></span><span class="text">{{$info->email}}</span></a></li>
+                            <li><a><span class="icon icon-phone"></span><span class="text">{{$info->phone}}</span></a></li>
+                            <li><a ><span class="icon icon-envelope"></span><span class="text">{{$info->email}}</span></a></li>
                             @endforeach
                         </ul>
                     </div>

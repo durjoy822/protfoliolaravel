@@ -22,7 +22,7 @@
 
                         <div class="sidebar-box ftco-animate">
                             <h3 class="heading-sidebar">About project</h3>
-                            <p>{{$project->details}}</p>
+                            <p>{{$project->project_details}}</p>
                         </div>
                     </div>
 

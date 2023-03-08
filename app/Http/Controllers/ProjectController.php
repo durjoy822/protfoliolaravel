@@ -22,6 +22,7 @@ class ProjectController extends Controller
          $this->project->heading        =$request->heading;
          $this->project->section        =$request->section;
          $this->project->technology        =$request->technology;
+        $this->project->project_details     =$request->project_details;
          $this->project->github_link        =$request->github_link;
          $this->project->server_link        =$request->server_link;
          $this->project->image          =$this->saveImage($request);
@@ -56,6 +57,7 @@ class ProjectController extends Controller
             $this->project->heading             =$request->heading;
             $this->project->section             =$request->section;
             $this->project->technology          =$request->technology;
+            $this->project->project_details     =$request->project_details;
             $this->project->github_link         =$request->github_link;
             $this->project->server_link         =$request->server_link;
             if($request->file('image')){

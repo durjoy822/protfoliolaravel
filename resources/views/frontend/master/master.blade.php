@@ -58,6 +58,7 @@
 
 <script src="{{asset('frontendAssets')}}/js/main.js"></script>
 
+
 </body>
 </html>
 

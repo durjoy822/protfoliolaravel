@@ -163,7 +163,10 @@
                     </a>
                     <div class="dropdown-menu dropdown-menu-right profile-notification">
                         <div class="pro-head">
-                            <img src="{{asset('adminAssets')}}/assets/images/user/avatar-1.jpg" class="img-radius" alt="User-Profile-Image">
+                            @php $infos = DB::table('admin_users')->get(); @endphp
+                            @foreach($infos as $info)
+                            <img src="{{asset($info->image)}}" class="img-radius" alt="User-Profile-Image">
+                            @endforeach
                             <span>{{\Auth::user()->name}}</span>
                             <a href="" onclick="event.preventDefault(); document.getElementById('logoutid').submit(); " class="dud-logout" title="Logout">
                                 <i class="feather icon-log-out"></i>

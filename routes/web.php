@@ -11,6 +11,8 @@ use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\SkillController;
 use App\Http\Controllers\ProjectController;
 use App\Http\Controllers\BlogController;
+use App\Http\Controllers\MessageController;
+use App\Http\Controllers\CvController;
 
 
 //Route::get('/', function () {
@@ -21,6 +23,7 @@ use App\Http\Controllers\BlogController;
 Route::get('/',[HomeController::class,'home'])->name('pro.home');
 Route::get('/blog_view',[HomeController::class,'blogView'])->name('blog.view');
 Route::get('/project_view/{id}',[HomeController::class,'projectView'])->name('project.view');
+
 
 
 //Admin user route
@@ -88,6 +91,9 @@ Route::post('/blog_update',[BlogController::class,'blogUpdate'])->name('blog.upd
 Route::post('/blog_delete',[BlogController::class,'blogDelete'])->name('blog.delete');
 //blog view
 
+Route::get('/message/index',[MessageController::class,'messageIndex'])->name('message.index');
+Route::post('/message',[MessageController::class,'messageStore'])->name('message.store');
+Route::post('/message/delete',[MessageController::class,'messageDelete'])->name('message.delete');
 
 
 
@@ -95,15 +101,14 @@ Route::post('/blog_delete',[BlogController::class,'blogDelete'])->name('blog.del
 //Register rotue
 Route::post('/user_reg',[AuthController::class,'newUser'])->name('user_register');
 
-Route::middleware([
-    'auth:sanctum',
-    config('jetstream.auth_session'),
-    'verified'
-])->group(function (){
-
+Route::middleware(['auth:sanctum', config('jetstream.auth_session'), 'verified'])->group(function (){
 //dashboard route
 Route::get('/dashboard',[HomeController::class,'admin_dashboard'])->name('dashboard');
 
+Route::get('/cv',[CvController::class,'cvIndex'])->name('cv.index');
+Route::post('/upload_cv',[CvController::class,'cvUpload'])->name('cv.upload');
+Route::post('/cv_download/{cv}',[CvController::class,'cvDownload'])->name('cv.download');
+Route::post('/cv_delete',[CvController::class,'cvDelete'])->name('cv.delete');
 });
 
 

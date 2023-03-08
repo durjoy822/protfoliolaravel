@@ -3,8 +3,11 @@
         <div class="navbar-content scroll-div " >
 
             <div class="">
+                @php $info = DB::table('admin_users')->get(); @endphp
                 <div class="main-menu-header">
-                    <img class="img-radius" src="{{asset('adminAssets')}}/assets/images/user/avatar-2.jpg" alt="User-Profile-Image">
+                    @foreach($info as $item)
+                    <img class="img-radius" src="{{asset($item->image)}}" alt="User-Profile-Image">
+                    @endforeach
 {{--                    <img class="img-radius" src="{{$admins->image}}" alt="User-Profile-Image">--}}
                     <div class="user-details">
                         <span>{{\Auth::user()->name}}</span>
@@ -37,32 +40,38 @@
                 <li class="nav-item pcoded-menu-caption">
                     <label>All Table</label>
                 </li>
-                <li class="nav-item pcoded-hasmenu">
+                <li class="nav-item ">
                     <a href="{{route('admin.manage')}}" class="nav-link "><span class="pcoded-micon"><i class="feather icon-box"></i></span><span class="pcoded-mtext">User Table</span></a>
 {{--                    <ul class="pcoded-submenu">--}}
 {{--                        <li><a href="{{route('admin.manage')}}">Manage</a></li>--}}
 {{--                    </ul>--}}
                 </li>
-                <li class="nav-item pcoded-hasmenu">
+                <li class="nav-item ">
                     <a href="{{route('slider.home')}}" class="nav-link "><span class="pcoded-micon"><i class="feather icon-box"></i></span><span class="pcoded-mtext">Slider Table</span></a>
                 </li>
-                <li class="nav-item pcoded-hasmenu">
+                <li class="nav-item ">
                     <a href="{{route('about.me')}}" class="nav-link "><span class="pcoded-micon"><i class="feather icon-box"></i></span><span class="pcoded-mtext">About Table</span></a>
                 </li>
-                <li class="nav-item pcoded-hasmenu">
+                <li class="nav-item ">
                     <a href="{{route('resume.home')}}" class="nav-link "><span class="pcoded-micon"><i class="feather icon-box"></i></span><span class="pcoded-mtext">Resume Table</span></a>
                 </li>
-                <li class="nav-item pcoded-hasmenu">
+                <li class="nav-item ">
                     <a href="{{route('service.home')}}" class="nav-link "><span class="pcoded-micon"><i class="feather icon-box"></i></span><span class="pcoded-mtext">Service Table</span></a>
                 </li>
-                <li class="nav-item pcoded-hasmenu">
+                <li class="nav-item ">
                     <a href="{{route('skill.home')}}" class="nav-link "><span class="pcoded-micon"><i class="feather icon-box"></i></span><span class="pcoded-mtext">Skill Table</span></a>
                 </li>
-                <li class="nav-item pcoded-hasmenu">
+                <li class="nav-item ">
                     <a href="{{route('project.home')}}" class="nav-link "><span class="pcoded-micon"><i class="feather icon-box"></i></span><span class="pcoded-mtext">project Table</span></a>
                 </li>
-                <li class="nav-item pcoded-hasmenu">
+                <li class="nav-item">
                     <a href="{{route('blog.home')}}" class="nav-link "><span class="pcoded-micon"><i class="feather icon-box"></i></span><span class="pcoded-mtext">Blog Table</span></a>
+                </li>
+                <li class="nav-item ">
+                    <a href="{{route('message.index')}}" class="nav-link "><span class="pcoded-micon"><i class="feather icon-box"></i></span><span class="pcoded-mtext">Message</span></a>
+                </li>
+                <li class="nav-item ">
+                    <a href="{{route('cv.index')}}" class="nav-link "><span class="pcoded-micon"><i class="feather icon-box"></i></span><span class="pcoded-mtext">Cv </span></a>
                 </li>
             </ul>
         </div>

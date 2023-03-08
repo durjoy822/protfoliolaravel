@@ -58,13 +58,11 @@ class SliderController extends Controller
 
     }
 
-
-
-
-
-
     public function sliderDelete(Request $request){
          $this->slider=Slider::find($request->id);
+        if($this->slider->image !=null ){
+            unlink($this->slider->image );
+        }
          $this->slider->delete();
          return redirect(route('slider.home'));
     }

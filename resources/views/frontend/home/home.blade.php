@@ -61,7 +61,7 @@
                     <div class="counter-wrap ftco-animate d-flex mt-md-3">
                         <div class="text">
                             <p class="mb-4">
-                                <span class="number" data-number="300">0</span>
+                                <span class="number" data-number="3">0</span>
                                 <span>Project complete</span>
                             </p>
                             <p><a href="#" class="btn btn-primary py-3 px-3">Download CV</a></p>
@@ -168,8 +168,8 @@
         <div class="container">
             <div class="row justify-content-center pb-5">
                 <div class="col-md-12 heading-section text-center ftco-animate">
-                    <h1 class="big big-2">Projects</h1>
-                    <h2 class="mb-4">Our Projects</h2>
+                    <h1 class="big big-2"> Projects</h1>
+                    <h2 class="mb-4">My Projects</h2>
                     @foreach($projects as $project)
                     <p>{{$project->details}}</p>
                     @endforeach
@@ -195,40 +195,40 @@
     </section>
 
 
-    <section class="ftco-section" id="blog-section">
-        <div class="container">
-            <div class="row justify-content-center mb-5 pb-5">
-                <div class="col-md-7 heading-section text-center ftco-animate">
-                    <h1 class="big big-2">Blog</h1>
-                    <h2 class="mb-4">Our Blog</h2>
-                    @foreach($blogs as $blog)
-                    <p>{{$blog->heading}}</p>
-                    @endforeach
-                </div>
-            </div>
-            <div class="row d-flex">
-                @foreach($blogs as $blog)
-                <div class="col-md-4 d-flex ftco-animate">
-                    <div class="blog-entry justify-content-end">
-                        <a href="{{route('blog.view')}}" class="block-20" style="background-image: url('{{asset($blog->photo)}}');">
-                        </a>
-                        <div class="text mt-3 float-right d-block">
-                            <div class="d-flex align-items-center mb-3 meta">
-                                <p class="mb-0">
-                                    <span class="mr-2">{{$blog->date}}</span>
-                                    <a href="#" class="mr-2">Admin</a>
-                                    <a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a>
-                                </p>
-                            </div>
-                            <h3 class="heading"><a href="{{route('blog.view')}}">{{($blog->content)}}</a></h3>
-                            <p>{{$blog->details}}</p>
-                        </div>
-                    </div>
-                </div>
-                @endforeach
-            </div>
-        </div>
-    </section>
+{{--    <section class="ftco-section" id="blog-section">--}}
+{{--        <div class="container">--}}
+{{--            <div class="row justify-content-center mb-5 pb-5">--}}
+{{--                <div class="col-md-7 heading-section text-center ftco-animate">--}}
+{{--                    <h1 class="big big-2">Blog</h1>--}}
+{{--                    <h2 class="mb-4">My Blog</h2>--}}
+{{--                    @foreach($blogs as $blog)--}}
+{{--                    <p>{{$blog->heading}}</p>--}}
+{{--                    @endforeach--}}
+{{--                </div>--}}
+{{--            </div>--}}
+{{--            <div class="row d-flex">--}}
+{{--                @foreach($blogs as $blog)--}}
+{{--                <div class="col-md-4 d-flex ftco-animate">--}}
+{{--                    <div class="blog-entry justify-content-end">--}}
+{{--                        <a href="{{route('blog.view')}}" class="block-20" style="background-image: url('{{asset($blog->photo)}}');">--}}
+{{--                        </a>--}}
+{{--                        <div class="text mt-3 float-right d-block">--}}
+{{--                            <div class="d-flex align-items-center mb-3 meta">--}}
+{{--                                <p class="mb-0">--}}
+{{--                                    <span class="mr-2">{{$blog->date}}</span>--}}
+{{--                                    <a href="#" class="mr-2">Admin</a>--}}
+{{--                                    <a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a>--}}
+{{--                                </p>--}}
+{{--                            </div>--}}
+{{--                            <h3 class="heading"><a href="{{route('blog.view')}}">{{($blog->content)}}</a></h3>--}}
+{{--                            <p>{{$blog->details}}</p>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--                @endforeach--}}
+{{--            </div>--}}
+{{--        </div>--}}
+{{--    </section>--}}
 
     <section class="ftco-section contact-section ftco-no-pb" id="contact-section">
         <div class="container">
@@ -281,18 +281,25 @@
 
             <div class="row no-gutters block-9">
                 <div class="col-md-6 order-md-last d-flex">
-                    <form action="#" class="bg-light p-4 p-md-5 contact-form">
+                    <form action="{{route('message.store')}}" method="post" class="bg-light p-4 p-md-5 contact-form">
+                        @csrf
                         <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Your Name">
+                            <input type="text" name="name" class="form-control" placeholder="Your Name">
+                            @error('name')
+                            <div class="alert alert-danger">{{ $message }}</div>
+                            @enderror
                         </div>
                         <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Your Email">
+                            <input type="text" name="email" class="form-control" placeholder="Your Email">
+                            @error('email')
+                            <div class="alert alert-danger">{{ $message }}</div>
+                            @enderror
                         </div>
                         <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Subject">
+                            <input type="text" name="subject" class="form-control" placeholder="Subject">
                         </div>
                         <div class="form-group">
-                            <textarea name="" id="" cols="30" rows="7" class="form-control" placeholder="Message"></textarea>
+                            <textarea name="message" id="" cols="30" rows="7" class="form-control" placeholder="Message"></textarea>
                         </div>
                         <div class="form-group">
                             <input type="submit" value="Send Message" class="btn btn-primary py-3 px-5">
