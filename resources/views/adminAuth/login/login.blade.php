@@ -18,7 +18,7 @@
     <meta name="keywords" content="">
     <meta name="author" content="Phoenixcoded" />
     <!-- Favicon icon -->
-    <link rel="icon" href="{{asset('adminAssets')}}/assets/images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="{{asset('adminAssets')}}/assets/images/favicon.png" type="image/x-icon">
 
     <!-- vendor css -->
     <link rel="stylesheet" href="{{asset('adminAssets')}}/assets/css/style.css">
@@ -31,7 +31,7 @@
 <!-- [ auth-signin ] start -->
 <div class="auth-wrapper">
     <div class="auth-content text-center">
-        <img src="{{asset('adminAssets')}}/assets/images/logo.png" alt="" class="img-fluid mb-4">
+        <img src="{{asset('adminAssets')}}/assets/images/favicon.png"  style="width: 100px" alt="" class="img-fluid mb-4">
         <div class="card borderless">
             <div class="row align-items-center ">
                 <div class="col-md-12">
@@ -43,18 +43,16 @@
                         <div class="form-group mb-3">
                             <input type="email" class="form-control" name="email"  placeholder="Email address">
                         </div>
-                        <div class="form-group mb-4">
+                        <div class="form-group ">
                             <input type="password" class="form-control" name="password" placeholder="Password">
                         </div>
-                        <div class="custom-control custom-checkbox text-left mb-4 mt-2">
+                        <div class="custom-control ">
                             <input type="checkbox" name="remember" class="custom-control-input" id="customCheck1">
-                            <label class="custom-control-label"  for="customCheck1">Save credentials.</label>
                         </div>
                         <button  type="submit" class="btn btn-block btn-primary mb-4">Signin</button>
                         <hr>
-                        <p class="mb-2 text-muted">Forgot password? <a href="auth-reset-password.html" class="f-w-400">Reset</a></p>
-                        <p class="mb-0 text-muted">Don’t have an account? <a href="auth-signup.html" class="f-w-400">Signup</a></p>
-                    </div>
+                        <p class="mb-0 text-muted">Don’t have an account? <a href="{{route('register')}}" class="f-w-400">Signup</a></p>
+{{--                    </div>--}}
                 </div>
             </div>
         </div>

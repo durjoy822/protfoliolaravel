@@ -18,7 +18,7 @@
     <meta name="keywords" content="">
     <meta name="author" content="Phoenixcoded" />
     <!-- Favicon icon -->
-    <link rel="icon" href="{{asset('adminAssets')}}/assets/images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="{{asset('adminAssets')}}/assets/images/favicon.png" type="image/x-icon">
 
     <!-- vendor css -->
     <link rel="stylesheet" href="{{asset('adminAssets')}}/assets/css/style.css">
@@ -31,7 +31,7 @@
 <!-- [ auth-signup ] start -->
 <div class="auth-wrapper">
     <div class="auth-content text-center">
-        <img src="{{asset('adminAssets')}}/assets/images/logo.png" alt="" class="img-fluid mb-4">
+        <img src="{{asset('adminAssets')}}/assets/images/favicon.png" alt="logo" style="width: 100px" class="img-fluid mb-4">
         <div class="card borderless">
             <div class="row align-items-center text-center">
                 <div class="col-md-12">
@@ -50,7 +50,6 @@
                         </div>
                         <div class="custom-control custom-checkbox  text-left mb-4 mt-2">
                             <input type="checkbox" class="custom-control-input" id="customCheck1">
-                            <label class="custom-control-label" for="customCheck1">Send me the <a href="#!"> Newsletter</a> weekly.</label>
                         </div>
                         <button type="submit" class="btn btn-primary btn-block mb-4">Sign up</button>
                         </form>

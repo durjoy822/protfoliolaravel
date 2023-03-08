@@ -5,8 +5,9 @@
         <a class="mobile-menu" id="mobile-collapse" href="#!"><span></span></a>
         <a href="#!" class="b-brand">
             <!-- ========   change your logo hear   ============ -->
-            <img src="{{asset('adminAssets')}}/assets/images/logo.png" alt="" class="logo">
-            <img src="{{asset('adminAssets')}}/assets/images/logo-icon.png" alt="" class="logo-thumb">
+            <img src="{{asset('adminAssets')}}/assets/images/favicon.png" alt="" style="width: 70px" class="logo img-fluid">
+            <h5 class="text-warning">Protfolio</h5>
+            
         </a>
         <a href="#!" class="mob-toggler">
             <i class="feather icon-more-vertical"></i>
