@@ -7,14 +7,15 @@
         text-transform: uppercase;
         font-size: 16px;
         letter-spacing: .1em;
-    }
-</style>
 
+}
+</style>
+<div id="particles-js"> </div>
 @include('frontend.include.headerlink')
 <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
     <div class="container">
         <a class="navbar-brand font-italic" href="http://localhost/protfoliolaravel/public">Nr<sub class="text-danger">protfolio</sub></a>
-        <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation" style=" color: rgba(225, 201, 201, 0.5) !important">
             <span class="oi oi-menu"></span> Menu
         </button>
 
@@ -125,6 +126,16 @@
 </footer>
 
 @include('frontend.include.footerscript')
+<style>
+    #particles-js {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+    }
+</style>
 <!-- .section -->
 {{--    @endsection--}}
 

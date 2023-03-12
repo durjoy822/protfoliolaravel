@@ -15,3 +15,5 @@
 <script src="{{asset('frontendAssets')}}/js/scrollax.min.js"></script>
 
 <script src="{{asset('frontendAssets')}}/js/main.js"></script>
+<script src="{{asset('frontendAssets')}}/js/particles.js"></script>
+<script src="{{asset('frontendAssets')}}/js/app.js"></script>

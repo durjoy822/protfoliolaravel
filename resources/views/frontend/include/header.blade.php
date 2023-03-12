@@ -1,5 +1,4 @@
-
-    <style>
+ <style>
     .ftco-navbar-light.scrolled .navbar-toggler {
     border: none;
     color: rgb(242 238 238 / 36%) !important;
@@ -9,8 +8,9 @@
     font-size: 16px;
     letter-spacing: .1em;
     }
-    </style>
 
+
+    </style>
 <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
     <div class="container">
         <a class="navbar-brand font-italic" href="http://localhost/protfoliolaravel/public">Nr<sub class="text-danger">protfolio</sub></a>

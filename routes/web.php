@@ -107,7 +107,7 @@ Route::get('/dashboard',[HomeController::class,'admin_dashboard'])->name('dashbo
 
 Route::get('/cv',[CvController::class,'cvIndex'])->name('cv.index');
 Route::post('/upload_cv',[CvController::class,'cvUpload'])->name('cv.upload');
-Route::post('/cv_download/{cv}',[CvController::class,'cvDownload'])->name('cv.download');
+Route::post('/cv_download/{id}',[CvController::class,'cvDownload'])->name('cv.download');
 Route::post('/cv_delete',[CvController::class,'cvDelete'])->name('cv.delete');
 });
 

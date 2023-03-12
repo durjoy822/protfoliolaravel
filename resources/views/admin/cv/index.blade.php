@@ -35,7 +35,7 @@
                                         <td>{{$cv->id}}</td>
                                         <td>{{$cv->cv}}</td>
                                         <td>
-                                            <form action="{{route('cv.download',['cv'=>$cv->cv])}}" method="post" style="display: inline" >@csrf
+                                            <form action="{{route('cv.download',['id'=>$cv->id])}}" method="post" style="display: inline" >@csrf
                                                 <input type="hidden" name="id" value="{{$cv->cv}}">
                                                 <input type="submit" value="Download" class="btn  btn-danger">
                                             </form>

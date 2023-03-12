@@ -2,12 +2,13 @@
 <html lang="en">
 <head>
     @include('frontend.include.headerlink')
+
 </head>
-<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+<div id="particles-js"> </div>
+<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300"  >
 
 {{--header here --}}
 @include('frontend.include.header')
-
 
 
 <!--body content main part-->
